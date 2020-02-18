@@ -4,7 +4,6 @@ RUN apk update \
     && apk upgrade \
     && apk add --no-cache \
     bash \ 
-    htop \
     curl \
     htop \
     netcat-openbsd \
