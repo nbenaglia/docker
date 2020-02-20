@@ -16,11 +16,12 @@ RUN apk update \
     python-dev \
     py-pip \
     tcpdump \
+    vim \
     && pip install awscli==$AWSCLI_VERSION --upgrade --user \
     && apk --purge -v del py-pip \
     && rm -rf /var/cache/apk/*
 
-RUN export PATH=$PATH:/root/.local/bin/
+ENV PATH=/root/.local/bin/:${PATH}
 
 CMD "bash"
  
