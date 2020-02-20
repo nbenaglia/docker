@@ -21,7 +21,7 @@ RUN apk update \
     && apk --purge -v del py-pip \
     && rm -rf /var/cache/apk/*
 
-ENV PATH=/root/.local/bin/:${PATH}
+RUN echo "export PATH=/root/.local/bin:${PATH}" >> /root/.bashrc
 
 CMD "bash"
  
