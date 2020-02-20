@@ -6,6 +6,7 @@ RUN apk update \
     && apk upgrade \
     && apk add --no-cache \
     bash \ 
+    bind-tools \
     build-base \
     busybox-extras \
     curl \
