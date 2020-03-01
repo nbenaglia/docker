@@ -118,10 +118,12 @@ Now a pretty simple and light container. Only 2MB!
 
 1. No shell: cannot use CMD or RUN instruction with string syntax.
 
+```
 ...
 FROM scratch
 COPY --from=0 /go/hello .
 CMD ./hello
+```
 
 ```error
 docker: Error response from daemon: OCI runtime create failed: container_linux.go:345: starting container process caused "exec: \"/bin/sh\": stat /bin/sh: no such file or directory": unknown.
