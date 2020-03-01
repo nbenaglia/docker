@@ -10,14 +10,14 @@ Tecniques:
 - Bazel (https://bazel.build/)
 - Distroless (https://github.com/GoogleContainerTools/distroless)
 - DockerSlim (https://dockersl.im/)
-- UPX 
+- UPX (https://upx.github.io/) 
 
 Some of these might be counter-productive in some scenarios, but might be useful in some particular cases.
 
 ---
 ## Simple code
 
-- heelo.c
+- hello.c
 
 ```c
 int main () {
