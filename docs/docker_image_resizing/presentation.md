@@ -47,9 +47,11 @@ RUN go build hello.go
 CMD ['hello']
 ```
 
+```
 -> docker image ls
 REPOSITORY                  TAG                             IMAGE ID            CREATED              SIZE
 hello_golang                latest                          5eef86aaf9e7        About a minute ago   811MB
+```
 
 For a binary of 2MB we get a 800MB of docker image (x400). What???
 
@@ -75,10 +77,12 @@ CMD ["./hello"]
 But previous stage (golang) has WORKDIR /go
 Hint: set explicitly a WORKING in your Dockerfile.
 
+```
 -> docker image ls
 REPOSITORY                  TAG                             IMAGE ID            CREATED             SIZE
 hello_multistage            latest                          31ade6bfec07        4 seconds ago       225MB
 hello_golang                latest                          5eef86aaf9e7        4 minutes ago       811MB
+```
 
 Image size is now 225MB.
 It's better, but we want a smaller image.
@@ -99,12 +103,13 @@ COPY --from=0 /src/hello .
 CMD ["./hello"]
 ```
 
+```
 ->docker image ls
-
 REPOSITORY                  TAG                             IMAGE ID            CREATED             SIZE
 hello_scratch               latest                          989364b488ed        29 seconds ago      2.06MB
 hello_multistage            latest                          31ade6bfec07        16 minutes ago      225MB
 hello_golang                latest                          5eef86aaf9e7        21 minutes ago      811MB
+```
 
 Now a pretty simple and light container. Only 2MB!
 
