@@ -58,7 +58,7 @@ For a binary of 2MB we get a 800MB of docker image (x400). What???
 ---
 ## Multi-stage builds
 
-Simple idea: don't include the compiler in my image (security???), but only the binary resulting after compiling.
+Simple idea: don't include the compiler inside the image (security???), but only the binary resulting after compiling.
 
 ```dockerfile
 #has WORKDIR /go
