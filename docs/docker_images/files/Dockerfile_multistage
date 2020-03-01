@@ -1,0 +1,9 @@
+#Golang has WORKDIR /go
+FROM golang 
+COPY hello.go .
+RUN go build hello.go
+
+FROM ubuntu:14.04
+COPY --from=0 /go/hello .
+CMD ["./hello"]
+
