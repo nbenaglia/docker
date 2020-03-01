@@ -1,4 +1,4 @@
-# Docker images
+# Docker image resizing
 
 ## Introduction
 
