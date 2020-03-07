@@ -176,13 +176,13 @@ TODO
 
 ## Inspect a docker image
 
-- `docker history <image_id>`: shows layers
+- `docker history <image_id>`: show layers
 
-- `docker inspect <image_id>`: displays low-level information on Docker objects
+- `docker inspect <image_id>`: display low-level information on Docker objects
 
 - Dive - a tool for exploring each layer in a docker image (https://github.com/wagoodman/dive)
 
-  - shows Docker image contents broken down by layer
+  - show Docker image contents broken down by layer
 
   - indicate what's changed in each layer
 
