@@ -209,6 +209,20 @@ hello_golang                latest        5eef86aaf9e7        7 days ago        
 
 ---
 
+## Dockerfile best-practices
+
+Linter for dockerfile best-practices analysis.
+
+- Hadolint <https://github.com/hadolint/hadolint>
+
+    `hadolint <Dockerfile>`
+
+- Dockerlint <https://github.com/RedCoolBeans/dockerlint/>
+
+    `dockerlint <Dockerfile>`
+
+---
+
 ## Recap
 
 - Original image built with golang: 811 MB
